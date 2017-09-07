@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 //  TODO: add a clear button that will clear the result & input fields
 
-//  TODO: the hint for the result widget is hard coded, put it in the strings file
-
 public class MainActivity extends AppCompatActivity {
     EditText etNum1, etNum2;
     TextView result;
@@ -30,9 +28,25 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO: input validation: set text to show error
     public void addNums(View v) {
-        num1 = Double.parseDouble(etNum1.getText().toString());
-        num2 = Double.parseDouble(etNum2.getText().toString());
-        result.setText(Double.toString(num1 + num2));
+        if (validate()) {
+            num1 = Double.parseDouble(etNum1.getText().toString());
+            num2 = Double.parseDouble(etNum2.getText().toString());
+            result.setText(Double.toString(num1 + num2));
+        }
+        else {
+            result.setText(R.string.error_no_number);
+        }
     }  //addNums()
+
+    private boolean validate () {
+        try {
+            Double.parseDouble(etNum1.getText().toString());
+            num2 = Double.parseDouble(etNum2.getText().toString());
+            return true;
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+
+    } //validate()
 
 }
