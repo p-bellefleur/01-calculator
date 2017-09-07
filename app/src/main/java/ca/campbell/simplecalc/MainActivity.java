@@ -44,8 +44,17 @@ public class MainActivity extends AppCompatActivity {
         } else {
             result.setText(R.string.error_no_number);
         }
+    } //subtractNums()
 
-    }
+    public void multiplyNums(View v) {
+        if (validate()) {
+            num1 = Double.parseDouble(etNum1.getText().toString());
+            num2 = Double.parseDouble(etNum2.getText().toString());
+            result.setText(Double.toString(num1 * num2));
+        } else {
+            result.setText(R.string.error_no_number);
+        }
+    } //multiplyNums()
 
     private boolean validate () {
         try {
