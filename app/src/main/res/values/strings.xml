@@ -4,8 +4,9 @@
     <string name="subtract">Subtract</string>
     <string name="multiply">Multiply</string>
     <string name="divide">Divide</string>
+    <string name="clear">Clear text</string>
     <string name="enter_hint">Enter a number</string>
-    <string name="result">The answer will be here</string>
+    <string name="result_hint">The answer will be here</string>
     <string name="error_no_number">You did not enter a number!</string>
     <string name="error_divide_zero">You cannot divide by zero!</string>
 </resources>

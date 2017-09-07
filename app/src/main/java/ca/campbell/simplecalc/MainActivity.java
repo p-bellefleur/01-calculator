@@ -5,10 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-//  TODO: add buttons & methods for subtract, multiply, divide
-//  TODO: extra input validation: no divide by zero
-
 //  TODO: add a clear button that will clear the result & input fields
 
 public class MainActivity extends AppCompatActivity {
@@ -67,7 +63,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             result.setText(R.string.error_no_number);
         }
-    }
+    } //divideNums()
+
+    public void clearFields(View v) {
+        etNum1.setText("");
+        etNum2.setText("");
+        result.setText(R.string.result_hint);
+    } //clearFields()
 
     private boolean validate () {
         try {
