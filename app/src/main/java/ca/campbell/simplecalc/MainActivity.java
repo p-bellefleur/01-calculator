@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-//  TODO: add a clear button that will clear the result & input fields
 
 public class MainActivity extends AppCompatActivity {
     EditText etNum1, etNum2;
