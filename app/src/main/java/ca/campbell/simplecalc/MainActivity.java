@@ -56,6 +56,19 @@ public class MainActivity extends AppCompatActivity {
         }
     } //multiplyNums()
 
+    public void divideNums(View v) {
+        if (validate()) {
+            num1 = Double.parseDouble(etNum1.getText().toString());
+            num2 = Double.parseDouble(etNum2.getText().toString());
+            if (num2 == 0)
+                result.setText(R.string.error_divide_zero);
+            else
+                result.setText(Double.toString(num1 / num2));
+        } else {
+            result.setText(R.string.error_no_number);
+        }
+    }
+
     private boolean validate () {
         try {
             Double.parseDouble(etNum1.getText().toString());
