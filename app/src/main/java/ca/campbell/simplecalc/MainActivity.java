@@ -26,17 +26,26 @@ public class MainActivity extends AppCompatActivity {
         result = (TextView) findViewById(R.id.result);
     }  //onCreate()
 
-    // TODO: input validation: set text to show error
     public void addNums(View v) {
         if (validate()) {
             num1 = Double.parseDouble(etNum1.getText().toString());
             num2 = Double.parseDouble(etNum2.getText().toString());
             result.setText(Double.toString(num1 + num2));
-        }
-        else {
+        } else {
             result.setText(R.string.error_no_number);
         }
     }  //addNums()
+
+    public void subtractNums(View v) {
+        if (validate()) {
+            num1 = Double.parseDouble(etNum1.getText().toString());
+            num2 = Double.parseDouble(etNum2.getText().toString());
+            result.setText(Double.toString(num1 - num2));
+        } else {
+            result.setText(R.string.error_no_number);
+        }
+
+    }
 
     private boolean validate () {
         try {
